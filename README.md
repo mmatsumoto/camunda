@@ -1,5 +1,5 @@
 # Camunda - Spring
-
+ 
 
 #### Camunda: [http://localhost:8080](http://localhost:8080)
 
@@ -32,7 +32,6 @@ curl -X POST \
   http://localhost:8080/async-create-customer \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
-  -H 'Postman-Token: dfd0607e-7618-446f-b820-31cf0fc5eeeb' \
   -d '{
 	"customerName": "Customer Name",
 	"cityName": "City Name"
@@ -44,7 +43,6 @@ curl -X POST \
   http://localhost:8080/create-customer \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
-  -H 'Postman-Token: dfd0607e-7618-446f-b820-31cf0fc5eeeb' \
   -d '{
 	"customerName": "Customer Name",
 	"cityName": "City Name"
@@ -52,7 +50,46 @@ curl -X POST \
 ```
 
 [IncidentController](src/main/java/com/example/camunda/controller/IncidentController.java) **List the incidents** <br>
+
+To simulate a incident, try use this curl:<br>
+
+```
+curl -X POST \
+  http://localhost:8080/async-create-customer \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"customerName": "Customer1",
+	"cityName": "invalid"
+}'
+```
+
+Then:
+
+```
+curl -X GET \
+  http://localhost:8080/incidents \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json'
+```
+
 [JobController](src/main/java/com/example/camunda/controller/JobController.java) **Allows you to restart Jobs that fail. Check IncidentController** <br>
+
+Get the JobId and ExecutionId from [incidents](http://localhost:8080/incidents) and restart the job fixing the cityName.
+
+```
+curl -X PUT \
+  http://localhost:8080/jobs/96a54d09-a232-11e8-bca8-acde48001122/retry/1 \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "executionId": "d65b1ce6-a232-11e8-bca8-acde48001122",
+    "variables": {
+        "cityName": "new city name"
+    }
+}'
+```
+
 [ProcessController](src/main/java/com/example/camunda/controller/ProcessController.java) **Restart Process** <br>
 
 
