@@ -1,0 +1,6 @@
+--------------- BEGIN CAMUNDA BPM LICENSE KEY ---------------
+QTUeS67xJVpNg8WhDeAyYX76/vd/yd3MpL2/ZUvpr12BpAFjIbuWzbzqW4uEX
+x5Rq44MRJIVP4sBViY3HbEAsj021yAuje6YluLUdxaFAaH9RT8QpSEFvjfiM/
+Ew92hL5GysLCSCFvZ1CB4TDWGp7W7YOlCExC7dVyejJEJKeY0=;
+zup_innovation;2018-09-12
+---------------  END CAMUNDA BPM LICENSE KEY  ---------------
