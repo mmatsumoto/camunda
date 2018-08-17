@@ -12,11 +12,9 @@
 
 [http://localhost:8080/customers (POST|PUT|GET|DELETE)](http://localhost:8080/customers)
 
-<br>
 
 #### Some Camunda Processes are started [here](src/main/java/com/example/camunda/CamundaApplication.java).
 
-<br>
 
 #### Camunda bpmn files: 
 [printHello.bpmn](src/main/resources/camunda/printHello.bpmn) <br>
@@ -25,9 +23,8 @@
 [createCitySubProcess.bpmn](src/main/resources/camunda/createCitySubProcess.bpmn) <br>
 [asyncCreateCustomer.bpmn](src/main/resources/camunda/asyncCreateCustomer.bpmn) <br> 
 
-<br>
 
-####Also, check the Controllers:
+#### Also, check the Controllers:
 [CustomerController](src/main/java/com/example/camunda/controller/CustomerController.java) **Allows you to start Camunda Process to create new users Sync and Async**
 
 ```
@@ -58,12 +55,9 @@ curl -X POST \
 [JobController](src/main/java/com/example/camunda/controller/JobController.java) **Allows you to restart Jobs that fail. Check IncidentController** <br>
 [ProcessController](src/main/java/com/example/camunda/controller/ProcessController.java) **Restart Process** <br>
 
-<br>
 
-#### Connecting to H2:
+#### Connecting to H2: [http://localhost:8080/h2-console/login.do](http://localhost:8080/h2-console/login.do)
 
-[http://localhost:8080/h2-console/login.do](http://localhost:8080/h2-console/login.do)
-
-**url:**:  jdbc:h2:mem:testdb
-**user:** sa
-**pass:** <empty>
+**url:**:  jdbc:h2:mem:testdb<br>
+**user:** sa<br>
+**pass:** <empty><br>
