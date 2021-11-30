@@ -7,7 +7,7 @@
 **pass:** admin <br>
 
 
-#### Springboot Data Rest is enabled, so the endpoints bellow are available
+#### Springboot Data Rest is enabled, so the endpoints below are available
 [http://localhost:8080/cities (POST|PUT|GET|DELETE)](http://localhost:8080/cities)
 
 [http://localhost:8080/customers (POST|PUT|GET|DELETE)](http://localhost:8080/customers)
